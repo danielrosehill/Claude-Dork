@@ -1,0 +1,187 @@
+{
+  "google": {
+    "name": "Google",
+    "search_url_template": "https://www.google.com/search?q={query}",
+    "boolean_operators": {
+      "and": "AND",
+      "or": "OR",
+      "not": "-",
+      "exact": "\"\"",
+      "wildcard": "*"
+    },
+    "dork_operators": [
+      {"operator": "site:", "description": "Restrict results to a specific site"},
+      {"operator": "intitle:", "description": "Search within page titles"},
+      {"operator": "inurl:", "description": "Search within URLs"},
+      {"operator": "intext:", "description": "Search within page body text"},
+      {"operator": "filetype:", "description": "Search for specific file types"},
+      {"operator": "cache:", "description": "View Google's cached version"},
+      {"operator": "related:", "description": "Find related sites"},
+      {"operator": "info:", "description": "Get info about a URL"},
+      {"operator": "define:", "description": "Get definitions"},
+      {"operator": "allintext:", "description": "All terms must appear in text"},
+      {"operator": "allintitle:", "description": "All terms must appear in title"},
+      {"operator": "allinurl:", "description": "All terms must appear in URL"}
+    ]
+  },
+  "reddit": {
+    "name": "Reddit",
+    "search_url_template": "https://www.reddit.com/search/?q={query}",
+    "google_site_search": "https://www.google.com/search?q=site:reddit.com+{query}",
+    "boolean_operators": {
+      "and": "AND",
+      "or": "OR",
+      "not": "NOT",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "subreddit:", "description": "Search within a specific subreddit"},
+      {"operator": "author:", "description": "Search posts by a specific author"},
+      {"operator": "flair:", "description": "Search by post flair"},
+      {"operator": "self:", "description": "Search self/text posts only (yes/no)"},
+      {"operator": "nsfw:", "description": "Include/exclude NSFW content (yes/no)"},
+      {"operator": "site:", "description": "Search for links to a specific domain"}
+    ]
+  },
+  "facebook": {
+    "name": "Facebook",
+    "search_url_template": "https://www.facebook.com/search/top/?q={query}",
+    "google_site_search": "https://www.google.com/search?q=site:facebook.com+{query}",
+    "boolean_operators": {
+      "and": " ",
+      "or": "OR",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "posts", "description": "Search public posts"},
+      {"operator": "people", "description": "Search people profiles"},
+      {"operator": "pages", "description": "Search Facebook pages"},
+      {"operator": "groups", "description": "Search Facebook groups"},
+      {"operator": "events", "description": "Search Facebook events"}
+    ],
+    "search_type_urls": {
+      "posts": "https://www.facebook.com/search/posts/?q={query}",
+      "people": "https://www.facebook.com/search/people/?q={query}",
+      "pages": "https://www.facebook.com/search/pages/?q={query}",
+      "groups": "https://www.facebook.com/search/groups/?q={query}",
+      "events": "https://www.facebook.com/search/events/?q={query}"
+    }
+  },
+  "twitter": {
+    "name": "Twitter/X",
+    "search_url_template": "https://x.com/search?q={query}&src=typed_query",
+    "google_site_search": "https://www.google.com/search?q=site:x.com+{query}",
+    "boolean_operators": {
+      "and": "AND",
+      "or": "OR",
+      "not": "-",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "from:", "description": "Tweets from a specific user"},
+      {"operator": "to:", "description": "Tweets replying to a specific user"},
+      {"operator": "#", "description": "Search by hashtag"},
+      {"operator": "min_retweets:", "description": "Minimum retweet count"},
+      {"operator": "min_faves:", "description": "Minimum like/favorite count"},
+      {"operator": "min_replies:", "description": "Minimum reply count"},
+      {"operator": "since:", "description": "Tweets since a date (YYYY-MM-DD)"},
+      {"operator": "until:", "description": "Tweets until a date (YYYY-MM-DD)"},
+      {"operator": "filter:links", "description": "Only tweets containing links"},
+      {"operator": "filter:media", "description": "Only tweets containing media"},
+      {"operator": "filter:images", "description": "Only tweets containing images"},
+      {"operator": "filter:videos", "description": "Only tweets containing videos"},
+      {"operator": "lang:", "description": "Filter by language code (e.g., en, es)"},
+      {"operator": "near:", "description": "Tweets near a location"},
+      {"operator": "within:", "description": "Within a radius (e.g., 15mi)"}
+    ]
+  },
+  "bluesky": {
+    "name": "Bluesky",
+    "search_url_template": "https://bsky.app/search?q={query}",
+    "google_site_search": "https://www.google.com/search?q=site:bsky.app+{query}",
+    "boolean_operators": {
+      "and": " ",
+      "or": "OR",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "from:", "description": "Posts from a specific user"},
+      {"operator": "since:", "description": "Posts since a date"},
+      {"operator": "until:", "description": "Posts until a date"},
+      {"operator": "has:media", "description": "Posts containing media"},
+      {"operator": "has:link", "description": "Posts containing links"}
+    ]
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "search_url_template": "https://www.linkedin.com/search/results/all/?keywords={query}",
+    "google_site_search": "https://www.google.com/search?q=site:linkedin.com+{query}",
+    "boolean_operators": {
+      "and": "AND",
+      "or": "OR",
+      "not": "NOT",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "people", "description": "Search people profiles"},
+      {"operator": "companies", "description": "Search company pages"},
+      {"operator": "jobs", "description": "Search job listings"},
+      {"operator": "posts", "description": "Search posts/articles"},
+      {"operator": "groups", "description": "Search LinkedIn groups"}
+    ],
+    "search_type_urls": {
+      "people": "https://www.linkedin.com/search/results/people/?keywords={query}",
+      "companies": "https://www.linkedin.com/search/results/companies/?keywords={query}",
+      "jobs": "https://www.linkedin.com/search/results/jobs/?keywords={query}",
+      "posts": "https://www.linkedin.com/search/results/content/?keywords={query}",
+      "groups": "https://www.linkedin.com/search/results/groups/?keywords={query}"
+    }
+  },
+  "youtube": {
+    "name": "YouTube",
+    "search_url_template": "https://www.youtube.com/results?search_query={query}",
+    "google_site_search": "https://www.google.com/search?q=site:youtube.com+{query}",
+    "boolean_operators": {
+      "and": " ",
+      "or": "|",
+      "not": "-",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "intitle:", "description": "Search within video titles (via Google)"},
+      {"operator": "channel:", "description": "Search within a specific channel"}
+    ]
+  },
+  "github": {
+    "name": "GitHub",
+    "search_url_template": "https://github.com/search?q={query}&type=repositories",
+    "boolean_operators": {
+      "and": "AND",
+      "or": "OR",
+      "not": "NOT",
+      "exact": "\"\""
+    },
+    "dork_operators": [
+      {"operator": "language:", "description": "Filter by programming language"},
+      {"operator": "stars:>", "description": "Minimum star count"},
+      {"operator": "forks:>", "description": "Minimum fork count"},
+      {"operator": "path:", "description": "Search within a specific file path"},
+      {"operator": "extension:", "description": "Search by file extension"},
+      {"operator": "filename:", "description": "Search by filename"},
+      {"operator": "user:", "description": "Search repos by user/org"},
+      {"operator": "org:", "description": "Search repos by organization"},
+      {"operator": "repo:", "description": "Search within a specific repo"},
+      {"operator": "topic:", "description": "Search by repository topic"},
+      {"operator": "is:public", "description": "Only public repositories"},
+      {"operator": "created:>", "description": "Created after a date"},
+      {"operator": "pushed:>", "description": "Last pushed after a date"}
+    ],
+    "search_type_urls": {
+      "repositories": "https://github.com/search?q={query}&type=repositories",
+      "code": "https://github.com/search?q={query}&type=code",
+      "issues": "https://github.com/search?q={query}&type=issues",
+      "discussions": "https://github.com/search?q={query}&type=discussions",
+      "users": "https://github.com/search?q={query}&type=users"
+    }
+  }
+}

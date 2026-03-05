@@ -1,0 +1,5 @@
+output/*.csv
+!output/.gitkeep
+.venv/
+__pycache__/
+*.pyc
